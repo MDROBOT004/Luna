@@ -230,7 +230,7 @@ else:
 
 YT_DLP_OPTIONS = environ.get('YT_DLP_OPTIONS', '')
 if len(YT_DLP_OPTIONS) == 0:
-    YT_DLP_OPTIONS = ''
+    YT_DLP_OPTIONS = 'bv*+ba/b'
 
 SEARCH_LIMIT = environ.get('SEARCH_LIMIT', '')
 SEARCH_LIMIT = 0 if len(SEARCH_LIMIT) == 0 else int(SEARCH_LIMIT)
