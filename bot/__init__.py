@@ -228,7 +228,7 @@ if len(AUTO_DELETE_MESSAGE_DURATION) == 0:
 else:
     AUTO_DELETE_MESSAGE_DURATION = int(AUTO_DELETE_MESSAGE_DURATION)
 
-YT_DLP_OPTIONS = environ.get('YT_DLP_OPTIONS', '')
+YT_DLP_OPTIONS = environ.get('YT_DLP_OPTIONS', 'bv*+ba/b')
 if len(YT_DLP_OPTIONS) == 0:
     YT_DLP_OPTIONS = 'bv*+ba/b'
 
@@ -288,10 +288,10 @@ MEDIA_GROUP = MEDIA_GROUP.lower() == 'true'
 BASE_URL_PORT = environ.get('BASE_URL_PORT', '')
 BASE_URL_PORT = 80 if len(BASE_URL_PORT) == 0 else int(BASE_URL_PORT)
 
-BASE_URL = environ.get('BASE_URL', '').rstrip("/")
+BASE_URL = environ.get('BASE_URL', 'https://mlt-16.herokuapp.com').rstrip("/")
 if len(BASE_URL) == 0:
     log_warning('BASE_URL not provided!')
-    BASE_URL = 'https://mlt-15.herokuapp.com'
+    BASE_URL = 'https://mlt-16.herokuapp.com'
 
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 if len(UPSTREAM_REPO) == 0:
